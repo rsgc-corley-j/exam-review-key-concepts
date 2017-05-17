@@ -21,8 +21,18 @@ import PlaygroundSupport
 //: ![timeline](timeline.png "Timeline")
 //: ## Your code starts here
 // Create a new canvas
+
+
 let canvas = Canvas(width: 400, height: 600)
 
+canvas.translate(byX: 20, byY: 400)
+
+
+for x in stride(from: 0, to:95 , by:5 ){
+    canvas.textColor = Color(hue: 0, saturation: 0, brightness: 0, alpha: 100 - x)
+    canvas.drawText(message: "understones", size: 50, x: 10, y: 0)
+    canvas.rotate(by: -5)
+}
 
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.
